@@ -30,4 +30,4 @@ jobs:
       run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.TOKEN }}
 
     - name: Push Docker Image
-      run: docker push ghcr.io/kurniawanfaridjadmiko/tugasmagang2:latest .
+      run: docker push ghcr.io/kurniawanfaridjadmiko/tugasmagang2:latest
