@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /app
 
 # Copy the generated Docusaurus project into the container
-COPY my-website /app
+COPY PROJECT-DEVOPS /app
 
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
