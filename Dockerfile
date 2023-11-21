@@ -1,14 +1,23 @@
-# Use an official Node.js runtime as a parent image
+# Gunakan image node.js
 FROM node:14
 
-# Set the working directory to /app
+# Setel direktori kerja
 WORKDIR /app
 
-# Copy the generated Docusaurus project into the container
-COPY PROJECT-DEVOPS /app
+# Salin package.json dan package-lock.json untuk instalasi dependensi
+COPY package*.json ./
 
-# Make port 3000 available to the world outside this container
+# Instal dependensi
+RUN npm install
+
+# Salin seluruh proyek
+COPY . .
+
+# Build proyek Docusaurus
+RUN npm run build
+
+# Ekspor port yang diperlukan (jika aplikasi menggunakan port tertentu)
 EXPOSE 3000
 
-# Run npm start when the container launches
+# Perintah untuk menjalankan aplikasi ketika kontainer dijalankan
 CMD ["npm", "start"]
