@@ -41,8 +41,8 @@ jobs:
     - name: Build and push Docker image
       run: |
         docker buildx create --use
-        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/KurniawanFaridJadmiko/my-repository:latest .
-        docker buildx imagetools inspect ghcr.io/KurniawanFaridJadmiko/my-repository:latest
+        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/kurniawanfaridfadmiko/tugasmagang2:latest .
+        docker buildx imagetools inspect ghcr.io/kurniawanfaridjadmiko/tugasmagang2:latest
 
     - name: Deploy to production
       run: |
