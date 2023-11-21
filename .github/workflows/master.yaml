@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - name: Log in to GitHub Container Registry (GHCR)
-      run: docker login ghcr.io -u ${{ github.actor }} -p KurniawanFarid1215
+      run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.TOKEN }}
 
     - name: Push Docker Image
       run: docker push ghcr.io/kurniawanfaridjadmiko/tugasmagang2:latest .
