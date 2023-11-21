@@ -22,7 +22,7 @@ jobs:
     - name: Build Docker image
       run: |
         docker buildx create --use
-        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/KurniawanFaridJadmiko/my-repository:latest .
+        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/kurniawanfaridjadmiko/tugasmagang2:latest .
 
   push:
     needs: build
