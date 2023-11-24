@@ -12,4 +12,6 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npm", "run", "server"]
+RUN npm run serve
+
+CMD ["npm", "start"]
