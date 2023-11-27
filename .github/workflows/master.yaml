@@ -34,3 +34,7 @@ jobs:
     steps:
       - name: Pull
         run: docker pull ghcr.io/kurniawanfaridjadmiko/tugasmagang2:${{ github.run_number }}
+
+      - name: Deploy with Docker Compose
+        run: |
+          docker-compose up -d
