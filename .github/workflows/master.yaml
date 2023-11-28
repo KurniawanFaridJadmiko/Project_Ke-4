@@ -32,11 +32,18 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Pull
         run: docker pull ghcr.io/kurniawanfaridjadmiko/tugasmagang2:${{ github.run_number }}
 
       - name: Deploy with Docker Compose
         run: |
-          docker compose pull
-          docker compose up --force-recreate --build -d
+          docker-compose pull
+          docker-compose up --force-recreate --build -d
           docker image prune -f
+
+      - name: Clean up
+        run: docker-compose down
+        
