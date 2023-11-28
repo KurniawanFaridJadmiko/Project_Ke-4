@@ -45,4 +45,4 @@ jobs:
           docker image prune -f
 
       - name: Clean up
-        run: docker-compose down
+        run: docker compose down
